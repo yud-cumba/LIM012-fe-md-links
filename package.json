@@ -1,9 +1,10 @@
 {
-  "name": "lim012-fe-md-links",
+  "name": "md-links",
   "version": "1.0.0",
-  "description": "Proyecto mdLinkspara Laboratoria",
-  "main": "index.js",
+  "description": "Proyecto mdLinks para Laboratoria",
+  "main": "src/app.js",
   "scripts": {
+    "build": "node app.js",
     "test": "jest",
     "test : coverage" : "jest --coverage"
   },
@@ -11,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/yud-cumba/LIM012-fe-md-links.git"
   },
+
   "author": "Yuditd Cumba",
   "license": "ISC",
   "bugs": {
