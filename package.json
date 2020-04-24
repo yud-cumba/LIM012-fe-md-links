@@ -6,13 +6,12 @@
   "scripts": {
     "build": "node app.js",
     "test": "jest",
-    "test : coverage" : "jest --coverage"
+    "test : coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yud-cumba/LIM012-fe-md-links.git"
   },
-
   "author": "Yuditd Cumba",
   "license": "ISC",
   "bugs": {
@@ -26,5 +25,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.3.0"
+  },
+  "dependencies": {
+    "marked": "^1.0.0"
   }
 }

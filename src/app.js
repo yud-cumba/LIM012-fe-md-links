@@ -1,4 +1,6 @@
-const str = 'hola mundo';
+//CLI
+
+const mdLinks = (path, options) => path + options ;
 module.exports = {
-    todas: str
+    options: mdLinks;
 }
