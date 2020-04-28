@@ -2,7 +2,7 @@
   "name": "md-links",
   "version": "1.0.0",
   "description": "Proyecto mdLinks para Laboratoria",
-  "main": "src/app.js",
+  "main": "lib/app.js",
   "scripts": {
     "build": "node app.js",
     "test": "jest",
