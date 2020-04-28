@@ -1,23 +1,11 @@
-const main = require('../src/main');
+const main = require('../lib/app.js');
 
-describe('Test de la función convertAbsolutePath', () => {
-  it('deberia ser una funcion', () => {
-    expect(typeof main.convertAbsolutePath).toBe('function');
-    
-  });
-
-  // more test
-  it('debería retornar /Pr/Para para C:\temp\a\b\bb\tmp.txt', () => {
-    expect(main.convertAbsolutePath('../../bb/tmp.txt')).toBe('C:\temp\a\b\bb\tmp.txt');
-  });
-
-});
 
 describe('Test de la función searchArchives', () => {
   it('deberia ser una funcion', () => {
     expect(typeof main.searchArchives).toBe('function');
   });
-
+  it('');
   // more test
 });
 
