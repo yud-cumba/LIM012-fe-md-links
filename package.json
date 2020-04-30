@@ -5,8 +5,7 @@
   "main": "lib/app.js",
   "scripts": {
     "build": "node app.js",
-    "test": "jest",
-    "test : coverage": "jest --coverage"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,8 @@
     "jest": "^25.3.0"
   },
   "dependencies": {
-    "marked": "^1.0.0"
+    "jsdom": "^16.2.2",
+    "marked": "^1.0.0",
+    "node-fetch": "^2.6.0"
   }
 }
