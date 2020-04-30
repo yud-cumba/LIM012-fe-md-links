@@ -1,7 +1,7 @@
 const { mdLinks } = require('../lib/app.js');
 
 describe('Test de la función mdLinks', () => {
-  it('deberia ser una funcion', () => {u
+  it('deberia ser una funcion', () => {
     expect(typeof mdLinks).toBe('function');
   });
 
@@ -11,7 +11,7 @@ describe('Test de la función mdLinks', () => {
   });
 
   it('Prueba con carpeta paraProbar y validate: false', () => {
-    mdLinks('/home/yudith/Documentos/Programacion/Proyectos/md-links/test/paraProbar', { validate: false })
+    mdLinks('/../../../../../../test/paraProbar', { validate: false })
       .then((link) => expect(link).toEqual([
         {
           text: 'Wikipedia',
@@ -27,6 +27,11 @@ describe('Test de la función mdLinks', () => {
           text: 'Github Yud',
           href: 'https://github.com/yud.cumba/md-links',
           file: '../../../../../../../../../README.md'
+        },
+        {
+          text: 'JW',
+          href: 'https://www.jw.org',
+          file: '../../../../../../../../../../README2.md'
         },
         {
           text: 'JW',
@@ -73,11 +78,18 @@ describe('Test de la función mdLinks', () => {
           status_text: 'ok'
         },
         {
+          text: 'JW',
+          href: 'https://www.jw.org',
+          file: '../../../../../../../../../../README2.md',
+          status: 200,
+          status_text: 'ok'
+        },
+        {
           text: 'Hola',
           href: 'https://hola.xp',
           file: '../../../../../../../../../../../README3.md',
           status: '',
-          status_text: 'Not found'
+          status_text: 'Not found',
         }
       ]));
   });
