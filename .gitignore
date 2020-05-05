@@ -1,5 +1,2 @@
-#Compile binary addons
-build
-
 #Dependencias directory
 node_modules
