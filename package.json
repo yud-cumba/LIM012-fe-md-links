@@ -1,5 +1,5 @@
 {
-  "name": "yud-cumba-md-links",
+  "name": "@yud-cumba/md-links",
   "version": "0.0.1",
   "description": "Proyecto mdLinks para Laboratoria",
   "main": "lib/app.js",

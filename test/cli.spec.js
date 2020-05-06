@@ -105,9 +105,11 @@ describe('Test para statsValidate', () => {
   it('Usando la carpeta paraProbar, debería retornar 6 links en total', () => {
     expect(cli.validateStats(objectValidateStats).total).toEqual(6);
   });
+
   it('Usando la carpeta paraProbar, debería retornar 5 links únicos', () => {
     expect(cli.validateStats(objectValidateStats).unique).toEqual(5);
   });
+
   it('Usando la carpeta paraProbar, debería retornar 1 link roto', () => {
     expect(cli.validateStats(objectValidateStats).broken).toEqual(1);
   });
