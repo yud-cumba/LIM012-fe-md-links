@@ -12,12 +12,15 @@ Markdown links es una herramienta que usa [Node.js](https://nodejs.org/), que le
 en formato `Markdown`, para verificar los links que contengan y reportar
 algunas estadísticas.
 
-##INSTALACIÓN
+## INSTALACIÓN
 
-Para instalar esta librería debemos ejecutar el siguiente comando
+Para instalar esta librería debemos ejecutar el siguiente comando en nuestra terminal
 
-npm install yud-cumba/md-links
-[Img-install]
+**npm install yud-cumba/md-links**
 
-##MODO DE USO
+![npm-install](https://raw.githubusercontent.com/yud-cumba/LIM012-cipher/master/img/instalación.png)
 
+## MODO DE USO
+
+- **md-links** 
+Al colocar **md-links** en la ventana de comando te muestra las opciones que puedes escoger
