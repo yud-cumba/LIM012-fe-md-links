@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Proyecto mdLinks para Laboratoria",
   "main": "lib/app.js",
-  "bin": "cli/cli.js",
+  "bin": "lib/cli.js",
   "scripts": {
     "build": "node app.js",
     "test": "jest --coverage",
