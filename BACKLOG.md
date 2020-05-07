@@ -2,7 +2,7 @@
 
 ## DIAGRAMA DE FLUJO
 
-![diagrama-de-flujos] (https://raw.githubusercontent.com/yud-cumba/md-links/master/img/diagrama-de-flujo.png)
+![diagrama-de-flujos](https://raw.githubusercontent.com/yud-cumba/md-links/master/img/diagrama-de-flujo.png)
 
 ## OBJETIVOS DE APRENDIZAJE
 

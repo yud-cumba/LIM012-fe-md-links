@@ -118,4 +118,4 @@ Por ejemplo:
 
 ![md-links-stats-validate](https://raw.githubusercontent.com/yud-cumba/md-links/master/img/md-links-stats-validate.png)
 
-[Información del backlog para la implementación de la librería] (BACKLOG.md)
+[Información del backlog para la implementación de la librería](https://github.com/yud-cumba/md-links/blob/master/BACKLOG.md)
