@@ -1,4 +1,4 @@
-const cli = require('../lib/cli.js');
+const cli = require('../lib/cli_options.js');
 
 const objectStats = [
   {

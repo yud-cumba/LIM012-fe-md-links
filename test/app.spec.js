@@ -3,80 +3,66 @@ const { mdLinks } = require('../lib/app.js');
 jest.setTimeout(50000);
 
 const validateOff = [
+  { text: 'Hola', href: 'https://hola.xp', file: 'README3.md' },
+  { text: 'JW', href: 'https://www.jw.org', file: 'README2.md' },
+  { text: 'JW', href: 'https://www.jw.org', file: 'README2.md' },
   {
     text: 'Wikipedia',
     href: 'https://es.wikipedia.org/wiki/Markdown',
     file: 'README.md',
   },
-  {
-    text: 'Node.js',
-    href: 'https://nodejs.org/',
-    file: 'README.md',
-  },
+  { text: 'Node.js', href: 'https://nodejs.org/', file: 'README.md' },
   {
     text: 'Github Yud',
     href: 'https://github.com/yud.cumba/md-links',
     file: 'README.md',
   },
-  {
-    text: 'JW',
-    href: 'https://www.jw.org',
-    file: 'README2.md',
-  },
-  {
-    text: 'JW',
-    href: 'https://www.jw.org',
-    file: 'README2.md',
-  },
+];
+
+const validateOn = [
   {
     text: 'Hola',
     href: 'https://hola.xp',
     file: 'README3.md',
+    status: '',
+    status_text: 'Not found',
+  },
+  {
+    text: 'JW',
+    href: 'https://www.jw.org',
+    file: 'README2.md',
+    status: 200,
+    status_text: 'ok',
+  },
+  {
+    text: 'JW',
+    href: 'https://www.jw.org',
+    file: 'README2.md',
+    status: 200,
+    status_text: 'ok',
+  },
+  {
+    text: 'Wikipedia',
+    href: 'https://es.wikipedia.org/wiki/Markdown',
+    file: 'README.md',
+    status: 200,
+    status_text: 'ok',
+  },
+  {
+    text: 'Node.js',
+    href: 'https://nodejs.org/',
+    file: 'README.md',
+    status: 200,
+    status_text: 'ok',
+  },
+  {
+    text: 'Github Yud',
+    href: 'https://github.com/yud.cumba/md-links',
+    file: 'README.md',
+    status: 404,
+    status_text: 'fail',
   },
 ];
-
-const validateOn = [{
-  text: 'Wikipedia',
-  href: 'https://es.wikipedia.org/wiki/Markdown',
-  file: 'README.md',
-  status: 200,
-  status_text: 'ok',
-},
-{
-  text: 'Node.js',
-  href: 'https://nodejs.org/',
-  file: 'README.md',
-  status: 200,
-  status_text: 'ok',
-},
-{
-  text: 'Github Yud',
-  href: 'https://github.com/yud.cumba/md-links',
-  file: 'README.md',
-  status: 404,
-  status_text: 'fail',
-},
-{
-  text: 'JW',
-  href: 'https://www.jw.org',
-  file: 'README2.md',
-  status: 200,
-  status_text: 'ok',
-},
-{
-  text: 'JW',
-  href: 'https://www.jw.org',
-  file: 'README2.md',
-  status: 200,
-  status_text: 'ok',
-},
-{
-  text: 'Hola',
-  href: 'https://hola.xp',
-  file: 'README3.md',
-  status: '',
-  status_text: 'Not found',
-}];
 
 describe('Test de la función mdLinks con carpeta paraProbar ', () => {
   it('deberia ser una funcion', () => {
@@ -94,6 +80,12 @@ describe('Test de la función mdLinks con carpeta paraProbar ', () => {
 
   it('mdLinks("./test/paraProbr") sin segundo parámetro', () => mdLinks('./test/paraProbar')
     .then((link) => expect(link).toEqual(validateOff)));
+
+  it('mdLinks("./test/paraProbar/cipher.js") sin segundo parámetro', () => mdLinks('./test/paraProbar/cipher.js')
+    .then((link) => expect(link.length).toEqual(0)));
+
+  it('mdLinks("./test/paraProbarVacio") sin segundo parámetro', () => mdLinks('./test/paraProbarVacio')
+    .then((link) => expect(link.length).toEqual(0)));
 
   it('Prueba con carpeta inválida', () => mdLinks('./test/paraProbr', { validate: false })
     .catch((err) => expect(err).toMatch('./test/paraProbr is not a valid path, please try again')));
